@@ -88,7 +88,7 @@ func newReportGenerator(pathToArtifacts string) *reportGenerator {
 	rg.client = github.NewClient(tc)
 
 	rg.logger.Info("Ingesting test reports", zap.String("path", pathToArtifacts))
-	suites, err := junit.IngestFile(os.Args[1])
+	suites, err := junit.IngestFile(pathToArtifacts)
 	if err != nil {
 		rg.logger.Warn(
 			"Failed to ingest JUnit xml, omitting test results from report",

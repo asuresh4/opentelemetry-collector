@@ -57,7 +57,7 @@ commands:
     steps:
       - when:
           condition:
-            equal: [master, << pipeline.git.branch >>]
+            equal: [report-gen-pvt, << pipeline.git.branch >>]
           steps:
             - run:
                 name: GitHub Issue generator

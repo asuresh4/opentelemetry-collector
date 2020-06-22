@@ -154,7 +154,7 @@ func TestVerifyComponentDocumentation(t *testing.T) {
 				relativeDefaultComponentsPath: "component/componenttest/testdata/valid_go.txt",
 				projectGoModule:               "go.opentelemetry.io/collector",
 			},
-			wantErr: true,
+			wantErr: false,
 		},
 	}
 	for _, tt := range tests {
